@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './Header.js';
 import VoteButtons from './VoteButtons.js';
 import CommentButton from './CommentButton.js';
+import Comments from './Comments.js';
 import video from "../data/video.js";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Header views={videoObj.views} date={videoObj.createdAt} />
       <VoteButtons upvotes={videoObj.upvotes} downvotes={videoObj.downvotes} onClickCallback={handleVotes} />
       <CommentButton hidden={commentsHidden} toggle={toggle} />
+      <Comments comments={videoObj.comments} hidden={commentsHidden}/>
     </div>
   );
 }
