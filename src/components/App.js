@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header.js';
+import VoteButtons from './VoteButtons.js';
 import video from "../data/video.js";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         title="Thinking in React"
       />
       <Header views={videoObj.views} date={videoObj.createdAt} />
+      <VoteButtons upvotes={videoObj.upvotes} downvotes={videoObj.downvotes} />
     </div>
   );
 }
